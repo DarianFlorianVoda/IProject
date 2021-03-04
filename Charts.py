@@ -5,7 +5,7 @@ import shutil
 
 
 def barchart():
-    info = pd.read_csv('../Covid19Stats.csv')
+    info = pd.read_csv('Covid19Stats.csv')
     plt.figure(figsize=(10, 6))
     plt.title("Total New Cases by Continent")
     plt.bar(info.Continent, info.NewCases, color='midnightblue')
@@ -32,7 +32,7 @@ def barchart():
 
 
 def piechart():
-    data = pd.read_csv('../Covid19Stats.csv')
+    data = pd.read_csv('Covid19Stats.csv')
     df = pd.DataFrame(
         data={'Country': data['Country'], 'value': data['TotalCases']}, ).sort_values('value', ascending=False)
 
@@ -73,7 +73,7 @@ def piechart():
 
 
 def scatterchart():
-    data = pd.read_csv('../Covid19Stats.csv')
+    data = pd.read_csv('Covid19Stats.csv')
     plt.scatter(data.TotalDeaths, data.TotalCases)
     plt.ylabel("Total Cases")
     plt.xlabel("Total Deaths")

@@ -119,7 +119,7 @@ def getdata():
 
 
 def createfolder():
-    path = "../Covid19Stats"
+    path = "Covid19Stats"
     try:
         os.mkdir(path)
     except OSError:
